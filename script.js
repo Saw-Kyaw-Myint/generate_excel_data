@@ -9,6 +9,7 @@ function generateData() {
     }
 
     let data = '';
+    let counter = 1;
 
     // Generate header
     for (let i = 1; i <= columns; i++) {
@@ -17,10 +18,11 @@ function generateData() {
     }
     data += '\n';
 
-    // Generate rows
+    // Generate rows with incrementing data
     for (let i = 0; i < rows; i++) {
         for (let j = 1; j <= columns; j++) {
-            data += j;
+            data += counter;
+            counter++;
             if (j < columns) data += ',';
         }
         if (i < rows - 1) data += '\n';
